@@ -104,3 +104,11 @@
   "Creates an edge detection filter based on Laplace operators."
   (^Filter []
    (Filter. (com.jhlabs.image.LaplaceFilter.))))
+
+(defn threshold
+  "Creates a threshold filter"
+  (^Filter [upper-threshold]
+   (let [f (com.jhlabs.image.ThresholdFilter.)
+         _ (. f setUpperThreshold upper-threshold)]  
+     (Filter. f))))
+
