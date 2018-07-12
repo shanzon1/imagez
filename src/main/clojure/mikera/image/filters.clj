@@ -107,8 +107,7 @@
 
 (defn threshold
   "Creates a threshold filter"
-  (^Filter [upper-threshold]
-   (let [f (com.jhlabs.image.ThresholdFilter.)
-         _ (. f setUpperThreshold upper-threshold)]  
+  (^Filter [partition-value]
+   (let [f (com.jhlabs.image.ThresholdFilter. partition-value)]  
      (Filter. f))))
 
